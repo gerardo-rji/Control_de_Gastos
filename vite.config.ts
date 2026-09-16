@@ -5,4 +5,12 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: [
+      {
+        find: /^react-swipeable-list$/,
+        replacement: 'react-swipeable-list/dist/react-swipeable-list.esm.js',
+      },
+    ],
+  },
 })
